@@ -1,6 +1,7 @@
 # Book Management System
 ## A django webapp with postgresql database
 NOTE: Due to lack of time, this is bare-bones version of the project
+HEROKU: https://the-book-site.herokuapp.com/
 
 
 ADMIN PAGE: http://127.0.0.1:8000/admin/  
