@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Book List</h1>
+  {% if books %}
+  <ul>
+    {% for book in books %}
+      <li>{{book.book_title}}</li>
+      <li>{{book.author_fk.author_name}}</li>
+      <li>
+        {% for genre in book.genres.all %}
+          {{genre}},
+          {% endfor %}  
+      </li>
+       {% if book.description %}
+            <li>{{book.description}}</li>
+        {% endif %}
+      <li>{{book.price}}</li>
+      <hr>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No book info</p>
+  {% endif %} 
+{% endblock %}
